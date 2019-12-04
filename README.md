@@ -9,4 +9,5 @@ Here is how it looks :
 Feel free to contribute :)
 
 Chart by [Compound Interest](https://twitter.com/compoundchem)
+
 Data by NASA
