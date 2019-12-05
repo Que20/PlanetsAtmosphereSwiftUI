@@ -16,27 +16,37 @@ struct PlanetDescription: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            self.planet.name().font(.largeTitle).padding(.leading)
-            Text("Pressure: \(self.planetInfo.pressure())").padding(.leading)
-            PlanetComposition(composition: self.planetInfo.composition()).padding(.leading)
-            Text(self.planetInfo.note()).padding(.leading)
+            Text(self.planet.name())
+                .font(.largeTitle)
+                .padding(.leading)
+                .animation(nil)
+            Text("Pressure: \(self.planetInfo.pressure())")
+                .padding(.leading)
+                .animation(nil)
+            PlanetComposition(composition: self.planetInfo.composition())
+                .padding(.leading)
+            Text(self.planetInfo.note())
+                .padding(.leading)
+                .animation(nil)
             
             ZStack {
                 Rectangle()
-                .fill(Color.gray.opacity(0.1))
+                    .fill(Color.gray.opacity(0.1))
                 VStack {
-                    Text("Planet sizes not to scale.").font(.caption)
+                    Text("Planet sizes not to scale.")
+                        .font(.caption)
                     Divider()
-                    Text("Inspired by : COMPOUNDS INTEREST").font(.caption)
+                    Text("Inspired by : COMPOUNDS INTEREST")
+                        .font(.caption)
                     Text("Twitter: @compoundchem")
-                    .font(.caption)
-                    .onTapGesture {
-                        let url = URL(string: "https://twitter.com/compoundchem")!
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
+                        .font(.caption)
+                        .onTapGesture {
+                            let url = URL(string: "https://twitter.com/compoundchem")!
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
                     Divider()
                     Text("Atmospheric compositions taken from NASA")
-                    .font(.caption)
+                        .font(.caption)
                     Spacer()
                 }
                 .padding()

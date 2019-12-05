@@ -23,6 +23,7 @@ struct PlanetCompositionItem: View {
                 .fill(self.element.color)
                 .frame(width: 10, height: 10)
             Text("\(self.element.label) \(self.formatedOccupation) %")
+                .animation(nil)
         }
     }
 }

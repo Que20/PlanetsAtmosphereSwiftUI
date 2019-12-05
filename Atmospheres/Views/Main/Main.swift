@@ -17,15 +17,17 @@ struct Main: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text("In the Solar system").font(.largeTitle).bold().padding(.leading, 18)
+                    Text("In the Solar system")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.leading, 18)
                     Text("Planets :")
                         .font(.subheadline)
                         .padding(.top)
                         .padding(.leading)
-                        .padding(.bottom, -10)
+                        .padding(.bottom, -5)
                         .foregroundColor(Color.gray)
                     ScrollView(.horizontal) {
-                        Spacer(minLength: 20)
                         HStack {
                             Spacer()
                             ForEach(self.planets, id: \.self) { planet in
@@ -34,10 +36,11 @@ struct Main: View {
                                 }
                             }
                         }
-                        .frame(height: 120)
-                        Spacer(minLength: 20)
+                        .padding(.vertical)
+                        .frame(height: 150)
                     }
                     PlanetDescription(planet: self.current)
+                    .animation(.spring())
                 }
             }
             .navigationBarTitle(Text("Atmospheres"))

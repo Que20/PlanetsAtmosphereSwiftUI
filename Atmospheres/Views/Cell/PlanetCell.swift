@@ -18,8 +18,8 @@ struct PlanetCell: View {
                 ZStack {
                     Rectangle()
                         .fill(self.selected ? Color("cell_selected") : Color("cell"))
-                    VStack(alignment: .center, spacing: 20) {
-                        self.planet.name()
+                    VStack(alignment: .center, spacing: 15) {
+                        Text(self.planet.name())
                         self.planet.icon()
                     }
                 }

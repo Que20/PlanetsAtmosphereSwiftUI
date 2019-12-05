@@ -18,24 +18,24 @@ enum Planet: CaseIterable {
     case uranus
     case neptune
     
-    func name() -> some View {
+    func name() -> String {
         switch self {
         case .mercury:
-            return Text("Mercury")
+            return "Mercury"
         case .venus:
-            return Text("Venus")
+            return "Venus"
         case .earth:
-            return Text("Earth")
+            return "Earth"
         case .mars:
-            return Text("Mars")
+            return "Mars"
         case .jupiter:
-            return Text("Jupiter")
+            return "Jupiter"
         case .saturn:
-            return Text("Saturn")
+            return "Saturn"
         case .uranus:
-            return Text("Uranus")
+            return "Uranus"
         case .neptune:
-            return Text("Neptune")
+            return "Neptune"
         }
     }
     
