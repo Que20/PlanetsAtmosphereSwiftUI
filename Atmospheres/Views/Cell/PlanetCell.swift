@@ -18,6 +18,7 @@ struct PlanetCell: View {
                 ZStack {
                     Rectangle()
                         .fill(self.selected ? Color("cell_selected") : Color("cell"))
+                        .animation(.spring())
                     VStack(alignment: .center, spacing: 15) {
                         Text(self.planet.name())
                         self.planet.icon()
